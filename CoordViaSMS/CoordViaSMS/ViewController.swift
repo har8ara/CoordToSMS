@@ -14,6 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MFMessageComp
     
     var locationManager = CLLocationManager()
     var coordinate: CLLocationCoordinate2D!
+    
     @IBOutlet weak var addressLabel: UILabel!
     
     override func viewDidLoad() {
@@ -64,7 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MFMessageComp
             let messageVC = MFMessageComposeViewController()
             messageVC.messageComposeDelegate = self
             messageVC.recipients = ["1111111111", "2222222222"]
-            messageVC.body = "hello phone"
+            messageVC.body = self.addressLabel.text
             self.presentViewController(messageVC, animated: true, completion: nil)
         }
         else {
