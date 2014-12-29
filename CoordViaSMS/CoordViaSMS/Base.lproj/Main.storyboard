@@ -18,23 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-xe-SJz">
-                                <rect key="frame" x="221" y="143" width="155" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="0gy-eM-7F6"/>
-                                    <constraint firstAttribute="height" constant="43" id="mzN-rU-ZFb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Get my location">
-                                    <color key="titleColor" red="0.28785905934343436" green="0.28785905934343436" blue="0.28785905934343436" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getAddress:" destination="Cqo-Js-fmp" eventType="touchUpInside" id="dnM-LO-bp3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N44-KT-dyB">
-                                <rect key="frame" x="240" y="331" width="121" height="30"/>
+                                <rect key="frame" x="240" y="340" width="121" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xZh-if-7hS"/>
                                 </constraints>
@@ -46,23 +31,40 @@
                                     <action selector="launchMessageComposeViewController:" destination="Cqo-Js-fmp" eventType="touchUpInside" id="efO-3T-JdL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvW-nm-92l">
-                                <rect key="frame" x="99" y="204" width="398" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvW-nm-92l">
+                                <rect key="frame" x="28" y="194" width="545" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="LXc-fd-tcy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-xe-SJz">
+                                <rect key="frame" x="223" y="105" width="155" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="hYf-xd-pfp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Get my location">
+                                    <color key="titleColor" red="0.28785905934343436" green="0.28785905934343436" blue="0.28785905934343436" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAddress:" destination="Cqo-Js-fmp" eventType="touchUpInside" id="dnM-LO-bp3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KvW-nm-92l" firstAttribute="leading" secondItem="K38-gJ-zaX" secondAttribute="leadingMargin" constant="83" id="4B5-fc-SLO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KvW-nm-92l" secondAttribute="trailing" constant="87" id="9bq-hl-nn2"/>
-                            <constraint firstItem="N44-KT-dyB" firstAttribute="top" secondItem="KvW-nm-92l" secondAttribute="bottom" constant="48" id="HHb-yW-a0Q"/>
+                            <constraint firstItem="HUx-xe-SJz" firstAttribute="top" secondItem="8AQ-fM-QPs" secondAttribute="bottom" constant="85" id="Bj2-sg-ROl"/>
+                            <constraint firstItem="KvW-nm-92l" firstAttribute="centerX" secondItem="N44-KT-dyB" secondAttribute="centerX" id="Ges-Qf-HQh"/>
+                            <constraint firstItem="KvW-nm-92l" firstAttribute="top" secondItem="HUx-xe-SJz" secondAttribute="bottom" constant="46" id="H6M-G8-2KI"/>
+                            <constraint firstItem="N44-KT-dyB" firstAttribute="top" secondItem="KvW-nm-92l" secondAttribute="bottom" constant="27" id="IZt-H7-RGN"/>
                             <constraint firstItem="N44-KT-dyB" firstAttribute="centerX" secondItem="K38-gJ-zaX" secondAttribute="centerX" id="KHd-G5-an3"/>
-                            <constraint firstItem="KvW-nm-92l" firstAttribute="top" secondItem="HUx-xe-SJz" secondAttribute="bottom" constant="18" id="kuT-nm-B3z"/>
-                            <constraint firstItem="HUx-xe-SJz" firstAttribute="top" secondItem="8AQ-fM-QPs" secondAttribute="bottom" constant="123" id="tpL-zd-uAR"/>
-                            <constraint firstItem="KvW-nm-92l" firstAttribute="centerX" secondItem="HUx-xe-SJz" secondAttribute="centerX" id="wE1-oB-SzN"/>
-                            <constraint firstItem="UdB-dZ-Cso" firstAttribute="top" secondItem="N44-KT-dyB" secondAttribute="bottom" constant="239" id="wx4-zo-fzd"/>
+                            <constraint firstAttribute="centerY" secondItem="N44-KT-dyB" secondAttribute="centerY" constant="-55" id="S8v-Pt-DsJ"/>
+                            <constraint firstItem="HUx-xe-SJz" firstAttribute="centerX" secondItem="KvW-nm-92l" secondAttribute="centerX" id="joI-cg-6cb"/>
+                            <constraint firstItem="KvW-nm-92l" firstAttribute="leading" secondItem="K38-gJ-zaX" secondAttribute="leadingMargin" constant="12" id="yiF-1e-t3z"/>
                         </constraints>
                     </view>
                     <connections>
